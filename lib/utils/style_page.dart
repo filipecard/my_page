@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 Color baseColorBackgroundAndFont() {
-  return const Color.fromARGB(240, 69, 123, 157);
+  return Color.fromARGB(238, 25, 65, 90);
 }
 
 Color invisibleColor() {
@@ -9,11 +9,12 @@ Color invisibleColor() {
 }
 
 TextStyle baseFontStyle(
-    {double fontSize = 20, FontWeight fontWeight = FontWeight.normal}) {
+    {double fontSize = 18, FontWeight fontWeight = FontWeight.normal}) {
   return TextStyle(
     fontSize: fontSize,
     fontWeight: fontWeight,
     color: baseColorBackgroundAndFont(),
+    fontFamily: 'FiraCode',
   );
 }
 
@@ -27,14 +28,12 @@ Container whiteBoxContainer(Widget widget,
     color: baseColorBackgroundAndFont(),
     padding: EdgeInsets.only(
         left: marginPage(), right: marginPage(), top: top, bottom: botoom),
-    child: Expanded(
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: Colors.white, //Color.fromRGBO(19, 111, 99, 1),
-        ),
-        child: widget,
+    child: Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white, //Color.fromRGBO(19, 111, 99, 1),
       ),
+      child: widget,
     ),
   );
 }

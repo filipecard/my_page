@@ -28,7 +28,7 @@ Column profilePhotoAndName() {
                           fontSize: 26, fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text(
-                      "Programador fullstack",
+                      "Fullstack Develop",
                       style: baseFontStyle(fontWeight: FontWeight.w500),
                     ),
                   ),
