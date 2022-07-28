@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import '../utils/style_page.dart';
@@ -17,8 +19,10 @@ Column profilePhotoAndName() {
             child: Row(
               children: [
                 const CircleAvatar(
-                  radius: 100.0,
-                  backgroundImage: NetworkImage('images/png-me.png'),
+                  maxRadius: 70,
+                  backgroundImage: AssetImage(
+                    "images/png-me.png",
+                  ),
                 ),
                 Expanded(
                   child: ListTile(
