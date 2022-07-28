@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../utils/style_page.dart';
 
-Column profilePhotoAndName() {
+Column profilePhotoAndName(context) {
   return Column(
     children: [
       const SizedBox(
@@ -35,43 +35,9 @@ Column profilePhotoAndName() {
                     ),
                   ),
                 ),
-                Expanded(
-                  child: Column(
-                    children: [
-                      ListTile(
-                        leading: Icon(
-                          Icons.phone,
-                          color: baseColorBackgroundAndFont(),
-                        ),
-                        title: Text(
-                          '(86) 9 8134-6155',
-                          style: baseFontStyle(fontSize: 18),
-                        ),
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.email,
-                          color: baseColorBackgroundAndFont(),
-                        ),
-                        title: Text(
-                          'filipecardosooliveira@hotmail.com',
-                          style: baseFontStyle(fontSize: 18),
-                        ),
-                      ),
-                      ListTile(
-                        leading: Image.asset(
-                          "images/icon-linkedin.png",
-                          scale: 18,
-                          color: baseColorBackgroundAndFont(),
-                        ),
-                        title: Text(
-                          'www.linkedin.com/in/filipecarolidev/',
-                          style: baseFontStyle(fontSize: 18),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                marginPage(context) < 100
+                    ? const SizedBox()
+                    : Expanded(child: infoContato())
               ],
             ),
           ),
@@ -79,6 +45,45 @@ Column profilePhotoAndName() {
       ),
       const SizedBox(
         height: 20,
+      ),
+      marginPage(context) < 100 ? infoContato() : const SizedBox()
+    ],
+  );
+}
+
+Column infoContato() {
+  return Column(
+    children: [
+      ListTile(
+        leading: Icon(
+          Icons.phone,
+          color: baseColorBackgroundAndFont,
+        ),
+        title: Text(
+          '(86) 9 8134-6155',
+          style: baseFontStyle(fontSize: 18),
+        ),
+      ),
+      ListTile(
+        leading: Icon(
+          Icons.email,
+          color: baseColorBackgroundAndFont,
+        ),
+        title: Text(
+          'filipecardosooliveira@hotmail.com',
+          style: baseFontStyle(fontSize: 18),
+        ),
+      ),
+      ListTile(
+        leading: Image.asset(
+          "images/icon-linkedin.png",
+          scale: 18,
+          color: baseColorBackgroundAndFont,
+        ),
+        title: Text(
+          'www.linkedin.com/in/filipecarolidev/',
+          style: baseFontStyle(fontSize: 18),
+        ),
       ),
     ],
   );

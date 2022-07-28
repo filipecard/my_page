@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_page/pages/apresentacao_links/1-about_my_progress.dart';
 
 import '../utils/style_page.dart';
 
@@ -8,7 +9,7 @@ String urlBarneyExplodeMind =
 String urlBarneyAndTeddyFunny =
     'https://c.tenor.com/CN0FCjlEt5oAAAAC/how-i-met-your-mother-himym.gif';
 
-Container apresentacao() {
+Container apresentacao(BuildContext context) {
   return Container(
     padding: const EdgeInsets.all(30),
     child: Column(
@@ -16,12 +17,17 @@ Container apresentacao() {
       children: [
         const SizedBox(height: 20),
         Text(
-          '''Hello, welcome to my profile. I'm Filipe, a studant of the Systems Analysis and Development course. I'm in my last year of college, if you want to see my progress during this journey: 
+          '''I'm Filipe, a studant of the Systems Analysis and Development course. I'm in my last year of college, if you want to see my progress during this journey: 
           ''',
           style: baseFontStyle(),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const AboutMyProgress()),
+            );
+          },
           child: Text(
             '->> About my progress...',
             style: baseFontStyle(),
@@ -29,7 +35,7 @@ Container apresentacao() {
         ),
         const SizedBox(height: 50),
         Text(
-          ''' About me, I have many skills and tastes, a mixed musical taste. I'm a graphic designer and i like to develop my creativity with drawings and inspirations.
+          ''' About me, i have many skills and tastes, a mixed musical taste. I'm a graphic designer and i like to develop my creativity with drawings and inspirations.
           ''',
           style: baseFontStyle(),
         ),

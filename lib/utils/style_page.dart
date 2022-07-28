@@ -1,8 +1,8 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
-Color baseColorBackgroundAndFont() {
-  return const Color.fromARGB(238, 25, 65, 90);
-}
+Color baseColorBackgroundAndFont = Color.fromARGB(235, 42, 48, 53);
 
 Color invisibleColor() {
   return const Color.fromARGB(0, 230, 13, 13);
@@ -13,21 +13,29 @@ TextStyle baseFontStyle(
   return TextStyle(
     fontSize: fontSize,
     fontWeight: fontWeight,
-    color: baseColorBackgroundAndFont(),
+    color: baseColorBackgroundAndFont,
     fontFamily: 'FiraCode',
   );
 }
 
-double marginPage() {
-  return 300.00;
+double marginPage(context) {
+  var windowSize = MediaQuery.of(context).size.width;
+  if (windowSize > 1080) {
+    return 150.00;
+  } else {
+    return 10.00;
+  }
 }
 
-Container whiteBoxContainer(Widget widget,
+Container whiteBoxContainer(Widget widget, BuildContext context,
     {double top = 10, double botoom = 10}) {
   return Container(
-    color: baseColorBackgroundAndFont(),
+    color: baseColorBackgroundAndFont,
     padding: EdgeInsets.only(
-        left: marginPage(), right: marginPage(), top: top, bottom: botoom),
+        left: marginPage(context),
+        right: marginPage(context),
+        top: top,
+        bottom: botoom),
     child: Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../utils/style_page.dart';
 
-Column conhecimentosGerais() {
+Column conhecimentosGerais(context) {
   return Column(
     children: [
       const SizedBox(height: 20),
@@ -11,13 +11,28 @@ Column conhecimentosGerais() {
         style: baseFontStyle(fontWeight: FontWeight.bold, fontSize: 25),
       ),
       const SizedBox(height: 20),
-      languagesAndFrameworksIcons(),
+      languageAndFrameworkResponsive(context),
       const SizedBox(height: 20),
     ],
   );
 }
 
-Row languagesAndFrameworksIcons() {
+Widget languageAndFrameworkResponsive(context) {
+  if (marginPage(context) > 100) {
+    return Row(
+      children: [
+        Expanded(child: conhecimentosGeraisPart1()),
+        Expanded(child: conhecimentosGeraisPart2())
+      ],
+    );
+  } else {
+    return Column(
+      children: [conhecimentosGeraisPart1(), conhecimentosGeraisPart2()],
+    );
+  }
+}
+
+Row conhecimentosGeraisPart1() {
   return Row(
     children: [
       Expanded(
@@ -60,6 +75,13 @@ Row languagesAndFrameworksIcons() {
           title: Image.asset('images/javascript_icon.png', scale: 6.5),
         ),
       ),
+    ],
+  );
+}
+
+Row conhecimentosGeraisPart2() {
+  return Row(
+    children: [
       Expanded(
         child: ListTile(
           subtitle: Text(

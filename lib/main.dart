@@ -1,7 +1,9 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
+import 'package:my_page/pages/0-footer.dart';
 import 'package:my_page/pages/1-profile_photo_name.dart';
-import 'package:my_page/pages/2-Apresentacao.dart';
-import 'package:my_page/pages/3-conhecimentos_gerais.dart';
+import 'package:my_page/pages/2-apresentacao.dart';
 import 'package:my_page/utils/style_page.dart';
 
 void main() {
@@ -13,10 +15,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'My Profile',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      title: 'Filpe Profile',
+      theme: ThemeData.dark(),
       home: const MyHomePage(),
     );
   }
@@ -33,12 +33,20 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          title: const Center(
+              child: Text(
+            "Hello, welcome to my profile",
+            style: TextStyle(fontFamily: "FiraCode", fontSize: 25),
+          )),
+          automaticallyImplyLeading: false),
       body: ListView(
         scrollDirection: Axis.vertical,
         children: [
-          whiteBoxContainer(profilePhotoAndName(), top: 60),
-          whiteBoxContainer(apresentacao(), top: 10),
-          whiteBoxContainer(conhecimentosGerais(), top: 10, botoom: 800),
+          whiteBoxContainer(profilePhotoAndName(context), context, top: 60),
+          whiteBoxContainer(apresentacao(context), context, top: 10),
+          whiteBoxContainer(footer(), context, top: 10, botoom: 40)
+          // whiteBoxContainer(conhecimentosGerais(), top: 10, botoom: 800),
         ],
       ),
     );
