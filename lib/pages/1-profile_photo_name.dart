@@ -21,7 +21,7 @@ Column profilePhotoAndName() {
                 const CircleAvatar(
                   maxRadius: 70,
                   backgroundImage: AssetImage(
-                    "images/png-me.png",
+                    "images/me.png",
                   ),
                 ),
                 Expanded(
