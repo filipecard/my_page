@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 Color baseColorBackgroundAndFont() {
-  return Color.fromARGB(238, 25, 65, 90);
+  return const Color.fromARGB(238, 25, 65, 90);
 }
 
 Color invisibleColor() {
