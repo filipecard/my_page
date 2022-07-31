@@ -24,12 +24,12 @@ Column profilePhotoAndName(context) {
                 ),
                 Expanded(
                   child: ListTile(
-                    title: Text(
+                    title: SelectableText(
                       "Filipe Cardoso Oliveira",
                       style: baseFontStyle(
                           fontSize: 26, fontWeight: FontWeight.bold),
                     ),
-                    subtitle: Text(
+                    subtitle: SelectableText(
                       "Developer",
                       style: baseFontStyle(fontWeight: FontWeight.w500),
                     ),
@@ -59,7 +59,7 @@ Column infoContato() {
           Icons.phone,
           color: baseColorBackgroundAndFont,
         ),
-        title: Text(
+        title: SelectableText(
           '(86) 9 8134-6155',
           style: baseFontStyle(fontSize: 18),
         ),
@@ -69,7 +69,7 @@ Column infoContato() {
           Icons.email,
           color: baseColorBackgroundAndFont,
         ),
-        title: Text(
+        title: SelectableText(
           'filipecardosooliveira@hotmail.com',
           style: baseFontStyle(fontSize: 18),
         ),
@@ -80,7 +80,7 @@ Column infoContato() {
           scale: 18,
           color: baseColorBackgroundAndFont,
         ),
-        title: Text(
+        title: SelectableText(
           'www.linkedin.com/in/filipecarolidev/',
           style: baseFontStyle(fontSize: 18),
         ),
