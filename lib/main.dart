@@ -2,8 +2,8 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:my_page/pages/0-footer.dart';
-import 'package:my_page/pages/1-profile_photo_name.dart';
-import 'package:my_page/pages/2-apresentacao.dart';
+import 'package:my_page/pages/profile/profile_photo_name.dart';
+import 'package:my_page/pages/apresentacao/apresentacao.dart';
 import 'package:my_page/utils/style_page.dart';
 
 void main() {

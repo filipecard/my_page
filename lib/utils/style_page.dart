@@ -39,7 +39,8 @@ Container whiteBoxContainer(Widget widget, BuildContext context,
     child: Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Colors.white, //Color.fromRGBO(19, 111, 99, 1),
+        color: const Color.fromARGB(
+            255, 244, 247, 255), //Color.fromRGBO(19, 111, 99, 1),
       ),
       child: widget,
     ),
