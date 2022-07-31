@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "d82d3384ec7eebac090a15e2f6d4bdf4",
+  "assets/AssetManifest.json": "59e082adb6890e9cb8434b81a3cf4654",
 "assets/FontManifest.json": "c8fc440d48f60bc438ea1fee6f0e0b4a",
 "assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
 "assets/fonts/ttf/FiraCode-Bold.ttf": "94ca48ca47d40c014cfbb61b4772d0ad",
@@ -19,7 +19,9 @@ const RESOURCES = {
 "assets/images/me.png": "2cf778ae906eca1f9879a9c56f3e5ec6",
 "assets/images/python_icon.png": "5db5ff5cbdba280b241333c1d8e3f89c",
 "assets/images/qrcode_linkedin.jpg": "598daca45eaaaa4a59334e468561ffdd",
-"assets/NOTICES": "8f2b7ab052dfcf4ace9901a3769cab3f",
+"assets/images/wapp_qrcode.png": "9245fd95467160ee57eb2ce900026204",
+"assets/images/whatsapp_icon.png": "9fc6ca8cc1baac4c2e52e27a72ba3b14",
+"assets/NOTICES": "cbc238962dbdd77f39f118df55456062",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/shaders/ink_sparkle.frag": "a4a8b4987788c4b335b8763cae78e9fc",
 "canvaskit/canvaskit.js": "2bc454a691c631b07a9307ac4ca47797",
@@ -32,9 +34,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "538f331c12bcc86a5605f76b5b21cbdb",
-"/": "538f331c12bcc86a5605f76b5b21cbdb",
-"main.dart.js": "35799884d6cb7db50232a59ae25e30a4",
+"index.html": "24cf889cac12cce3811e4227b3c23b79",
+"/": "24cf889cac12cce3811e4227b3c23b79",
+"main.dart.js": "584e69629e69ca55822f25162c1f726e",
 "manifest.json": "30ddde756d268789e1e6b89b6bce1c8e",
 "version.json": "ef70ad0771fe20aa52cb72f0c554568b"
 };
