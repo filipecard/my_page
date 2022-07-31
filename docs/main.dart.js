@@ -63530,7 +63530,7 @@ A.qe.prototype={
 O(a){var s=null,r="FiraCode",q=A.abj(!0,s),p=$.bG(),o=t.F
 return A.acn(q,A.ac6(A.a([A.Ac(A.eu(s,A.oa(A.a([A.jo(A.wI(A.dG(s,A.hQ("images/whatsapp_icon.png",p,18),s,A.bY("Redirect to app",s,A.bu(s,s,p,s,s,s,s,s,r,s,s,18,s,s,B.n,s,s,!0,s,s,s,s,s,s,s,s),s,s)),new A.a3K(),s),s,300),B.uX,A.bY("Or",s,A.bu(s,s,$.bG(),s,s,s,s,s,r,s,s,18,s,s,B.n,s,s,!0,s,s,s,s,s,s,s,s),s,s),B.uX,A.hQ("images/wapp_qrcode.png",s,1.5),B.GE,A.bY("Use app scanner",s,A.bu(s,s,$.bG(),s,s,s,s,s,r,s,s,18,s,s,B.n,s,s,!0,s,s,s,s,s,s,s,s),s,s)],o),B.af,B.b9,B.ac),B.r,s,s,s,s,s,s,B.zD,s,s,s),a,800,10)],o),B.az))}}
 A.a3K.prototype={
-$0(){return A.a9x("https://wa.me/qr/46JGYHBNAFJZJ1")},
+$0(){return A.a9x("https://wa.me/558681346155")},
 $S:0}
 A.XW.prototype={}
 A.DB.prototype={

@@ -21,8 +21,7 @@ class WappRedirect extends StatelessWidget {
                   SizedBox(
                     width: 300,
                     child: TextButton(
-                      onPressed: () =>
-                          _launchUrl("https://wa.me/qr/46JGYHBNAFJZJ1"),
+                      onPressed: () => _launchUrl("https://wa.me/558681346155"),
                       child: ListTile(
                         leading: Image.asset(
                           "images/whatsapp_icon.png",
