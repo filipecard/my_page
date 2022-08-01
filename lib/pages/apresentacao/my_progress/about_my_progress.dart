@@ -1,5 +1,9 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
-import '../../utils/style_page.dart';
+import 'package:my_page/pages/footer.dart';
+import '../../../utils/style_page.dart';
+import '../../../utils/tools.dart';
 
 class AboutMyProgress extends StatelessWidget {
   const AboutMyProgress({super.key});
@@ -13,10 +17,91 @@ class AboutMyProgress extends StatelessWidget {
         children: [
           whiteBoxContainer(descriptionMyProgress(), context,
               top: 10, botoom: 10),
+          whiteBoxContainer(curriculoAndCertifications(context), context,
+              top: 10, botoom: 10),
           whiteBoxContainer(conhecimentosGerais(context), context,
-              top: 10, botoom: 800),
+              top: 10, botoom: 10),
+          whiteBoxContainer(footer(), context, top: 10, botoom: 30)
         ],
       ),
+    );
+  }
+}
+
+Container curriculoAndCertifications(context) {
+  return Container(
+    padding: const EdgeInsets.only(top: 20, bottom: 60, left: 60, right: 60),
+    child: Column(
+      children: [
+        Text(
+          "Resume and Certifications",
+          style: baseFontStyle(fontWeight: FontWeight.bold, fontSize: 28),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(height: 30),
+        Row(
+          children: [
+            const SizedBox(width: 30),
+            SizedBox(
+              width: 200,
+              child: TextButton(
+                onPressed: () {
+                  requestRedirectUrl(
+                      'https://drive.google.com/uc?id=13xMJjXOCzqt5SBsmmo3lx8idGsPvNUiY&export=download');
+                },
+                child: ListTile(
+                    leading: Icon(
+                      Icons.download,
+                      color: baseColorBackgroundAndFont,
+                    ),
+                    title: Text(
+                      "Resume",
+                      style: baseFontStyle(),
+                    )),
+              ),
+            ),
+            const SizedBox(width: 30),
+            SizedBox(
+              width: 250,
+              child: TextButton(
+                onPressed: () async {
+                  await showDialog(
+                    context: context,
+                    builder: (_) =>
+                        const ImageDialog(typeCertification: 'python'),
+                  );
+                },
+                child: ListTile(
+                    leading: Image.asset(
+                      "images/python_icon.png",
+                      scale: 15,
+                      // color: baseColorBackgroundAndFont,
+                    ),
+                    title: Text(
+                      "Python Certification",
+                      style: baseFontStyle(),
+                    )),
+              ),
+            ),
+          ],
+        ),
+      ],
+    ),
+  );
+}
+
+class ImageDialog extends StatelessWidget {
+  const ImageDialog({super.key, required this.typeCertification});
+
+  final String typeCertification;
+  @override
+  Widget build(BuildContext context) {
+    String pathImage = "";
+    if (typeCertification == "python") {
+      pathImage = 'images/python_certification.png';
+    }
+    return Dialog(
+      child: Image.asset(pathImage, fit: BoxFit.cover),
     );
   }
 }
@@ -73,7 +158,8 @@ Column conhecimentosGerais(context) {
       const SizedBox(height: 20),
       Text(
         "Languages and Frameworks",
-        style: baseFontStyle(fontWeight: FontWeight.bold, fontSize: 25),
+        style: baseFontStyle(fontWeight: FontWeight.bold, fontSize: 28),
+        textAlign: TextAlign.center,
       ),
       languageAndFrameworkResponsive(context),
       const SizedBox(height: 20),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_page/pages/apresentacao/about_my_progress.dart';
+import 'package:my_page/pages/apresentacao/my_progress/about_my_progress.dart';
 
 import '../../utils/style_page.dart';
 

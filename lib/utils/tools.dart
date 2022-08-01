@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_page/utils/style_page.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../main.dart';
 
@@ -28,4 +29,11 @@ Expanded buttonBackwardHomePage(context) {
       ),
     ),
   );
+}
+
+Future<void> requestRedirectUrl(String url) async {
+  Uri _url = Uri.parse(url);
+  if (!await launchUrl(_url)) {
+    throw 'Could not launch $url';
+  }
 }

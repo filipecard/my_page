@@ -1,7 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:my_page/pages/0-footer.dart';
+import 'package:my_page/pages/footer.dart';
 import 'package:my_page/pages/profile/profile_photo_name.dart';
 import 'package:my_page/pages/apresentacao/apresentacao.dart';
 import 'package:my_page/utils/style_page.dart';

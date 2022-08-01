@@ -9,12 +9,15 @@ Color invisibleColor() {
 }
 
 TextStyle baseFontStyle(
-    {double fontSize = 18, FontWeight fontWeight = FontWeight.normal}) {
+    {double fontSize = 18,
+    FontWeight fontWeight = FontWeight.normal,
+    TextDecoration decoration = TextDecoration.none}) {
   return TextStyle(
     fontSize: fontSize,
     fontWeight: fontWeight,
     color: baseColorBackgroundAndFont,
     fontFamily: 'FiraCode',
+    decoration: decoration,
   );
 }
 

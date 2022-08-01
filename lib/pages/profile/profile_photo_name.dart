@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_page/pages/profile/wapp_redirect.dart';
-import 'package:url_launcher/url_launcher.dart';
 import '../../utils/style_page.dart';
-
-Future<void> _launchUrl(String url) async {
-  Uri _url = Uri.parse(url);
-  if (!await launchUrl(_url)) {
-    throw 'Could not launch $url';
-  }
-}
+import '../../utils/tools.dart';
 
 Column profilePhotoAndName(context) {
   return Column(
@@ -99,7 +92,7 @@ Column infoContato(context) {
       SizedBox(
         width: 500,
         child: TextButton(
-          onPressed: () => _launchUrl(linkedinUrl),
+          onPressed: () => requestRedirectUrl(linkedinUrl),
           child: ListTile(
             leading: Image.asset(
               "images/icon-linkedin.png",
