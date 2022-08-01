@@ -1,10 +1,17 @@
-# my_page
+# My Page on Github.io
 
-A new Flutter project.
+This is [my page](https://filipecard.github.io/my_page/#/), it summarizes my personal and professional profile as well as contact and networking information.
 
-## Getting Started
+## Used Tech 
 
-This project is a starting point for a Flutter application.
+I used Flutter for the development of this page, with the following specs:
+
+    - sdk: 
+        '>=2.18.0-271.2.beta <3.0.0'
+        
+    - dependencies:
+        cupertino_icons: ^1.0.2
+        [url_launcher](https://pub.dev/packages/url_launcher): ^6.1.5
 
 A few resources to get you started if this is your first Flutter project:
 
