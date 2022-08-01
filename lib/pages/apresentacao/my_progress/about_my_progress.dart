@@ -30,7 +30,7 @@ class AboutMyProgress extends StatelessWidget {
 
 Container curriculoAndCertifications(context) {
   return Container(
-    padding: const EdgeInsets.only(top: 20, bottom: 60, left: 60, right: 60),
+    padding: const EdgeInsets.only(top: 20, bottom: 60, left: 10, right: 10),
     child: Column(
       children: [
         Text(
@@ -42,45 +42,49 @@ Container curriculoAndCertifications(context) {
         Row(
           children: [
             const SizedBox(width: 30),
-            SizedBox(
-              width: 200,
-              child: TextButton(
-                onPressed: () {
-                  requestRedirectUrl(
-                      'https://drive.google.com/uc?id=13xMJjXOCzqt5SBsmmo3lx8idGsPvNUiY&export=download');
-                },
-                child: ListTile(
-                    leading: Icon(
-                      Icons.download,
-                      color: baseColorBackgroundAndFont,
-                    ),
-                    title: Text(
-                      "Resume",
-                      style: baseFontStyle(),
-                    )),
+            Expanded(
+              child: SizedBox(
+                width: 200,
+                child: TextButton(
+                  onPressed: () {
+                    requestRedirectUrl(
+                        'https://drive.google.com/uc?id=13xMJjXOCzqt5SBsmmo3lx8idGsPvNUiY&export=download');
+                  },
+                  child: ListTile(
+                      leading: Icon(
+                        Icons.download,
+                        color: baseColorBackgroundAndFont,
+                      ),
+                      title: Text(
+                        "Resume",
+                        style: baseFontStyle(),
+                      )),
+                ),
               ),
             ),
-            const SizedBox(width: 30),
-            SizedBox(
-              width: 250,
-              child: TextButton(
-                onPressed: () async {
-                  await showDialog(
-                    context: context,
-                    builder: (_) =>
-                        const ImageDialog(typeCertification: 'python'),
-                  );
-                },
-                child: ListTile(
-                    leading: Image.asset(
-                      "images/python_icon.png",
-                      scale: 15,
-                      // color: baseColorBackgroundAndFont,
-                    ),
-                    title: Text(
-                      "Python Certification",
-                      style: baseFontStyle(),
-                    )),
+            const SizedBox(width: 20),
+            Expanded(
+              child: SizedBox(
+                width: 250,
+                child: TextButton(
+                  onPressed: () async {
+                    await showDialog(
+                      context: context,
+                      builder: (_) =>
+                          const ImageDialog(typeCertification: 'python'),
+                    );
+                  },
+                  child: ListTile(
+                      leading: Image.asset(
+                        "images/python_icon.png",
+                        scale: 15,
+                        // color: baseColorBackgroundAndFont,
+                      ),
+                      title: Text(
+                        "Python Certification",
+                        style: baseFontStyle(),
+                      )),
+                ),
               ),
             ),
           ],
@@ -108,7 +112,7 @@ class ImageDialog extends StatelessWidget {
 
 Container descriptionMyProgress() {
   return Container(
-    padding: const EdgeInsets.only(top: 20, bottom: 60, left: 60, right: 60),
+    padding: const EdgeInsets.only(top: 20, bottom: 60, left: 30, right: 30),
     child: Column(
       children: [
         Text(
