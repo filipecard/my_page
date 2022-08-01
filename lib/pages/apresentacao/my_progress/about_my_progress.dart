@@ -43,48 +43,42 @@ Container curriculoAndCertifications(context) {
           children: [
             const SizedBox(width: 30),
             Expanded(
-              child: SizedBox(
-                width: 200,
-                child: TextButton(
-                  onPressed: () {
-                    requestRedirectUrl(
-                        'https://drive.google.com/uc?id=13xMJjXOCzqt5SBsmmo3lx8idGsPvNUiY&export=download');
-                  },
-                  child: ListTile(
-                      leading: Icon(
-                        Icons.download,
-                        color: baseColorBackgroundAndFont,
-                      ),
-                      title: Text(
-                        "Resume",
-                        style: baseFontStyle(),
-                      )),
-                ),
+              child: TextButton(
+                onPressed: () {
+                  requestRedirectUrl(
+                      'https://drive.google.com/uc?id=13xMJjXOCzqt5SBsmmo3lx8idGsPvNUiY&export=download');
+                },
+                child: ListTile(
+                    leading: Icon(
+                      Icons.download,
+                      color: baseColorBackgroundAndFont,
+                    ),
+                    title: Text(
+                      "Resume",
+                      style: baseFontStyle(),
+                    )),
               ),
             ),
             const SizedBox(width: 20),
             Expanded(
-              child: SizedBox(
-                width: 250,
-                child: TextButton(
-                  onPressed: () async {
-                    await showDialog(
-                      context: context,
-                      builder: (_) =>
-                          const ImageDialog(typeCertification: 'python'),
-                    );
-                  },
-                  child: ListTile(
-                      leading: Image.asset(
-                        "images/python_icon.png",
-                        scale: 15,
-                        // color: baseColorBackgroundAndFont,
-                      ),
-                      title: Text(
-                        "Python Certification",
-                        style: baseFontStyle(),
-                      )),
-                ),
+              child: TextButton(
+                onPressed: () async {
+                  await showDialog(
+                    context: context,
+                    builder: (_) =>
+                        const ImageDialog(typeCertification: 'python'),
+                  );
+                },
+                child: ListTile(
+                    leading: Image.asset(
+                      "images/python_icon.png",
+                      scale: 15,
+                      // color: baseColorBackgroundAndFont,
+                    ),
+                    title: Text(
+                      "Python",
+                      style: baseFontStyle(),
+                    )),
               ),
             ),
           ],

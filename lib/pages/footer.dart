@@ -5,7 +5,7 @@ import '../utils/tools.dart';
 
 Container footer() {
   return Container(
-    padding: const EdgeInsets.only(top: 10, bottom: 10, right: 100, left: 20),
+    padding: const EdgeInsets.only(top: 10, bottom: 10, right: 30, left: 20),
     child: Row(
       children: [
         TextButton(
@@ -21,7 +21,7 @@ Container footer() {
         const Expanded(child: SizedBox(width: 1000)),
         Expanded(
           child: Text(
-            'by @FilipeCardoso, 2022',
+            'by Filipe Cardoso,2022',
             style: baseFontStyle(fontSize: 15),
             textAlign: TextAlign.end,
           ),
