@@ -39,51 +39,69 @@ Container curriculoAndCertifications(context) {
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 30),
-        Row(
-          children: [
-            const SizedBox(width: 30),
-            Expanded(
-              child: TextButton(
-                onPressed: () {
-                  requestRedirectUrl(
-                      'https://drive.google.com/uc?id=13xMJjXOCzqt5SBsmmo3lx8idGsPvNUiY&export=download');
-                },
-                child: ListTile(
-                    leading: Icon(
-                      Icons.download,
-                      color: baseColorBackgroundAndFont,
-                    ),
-                    title: Text(
-                      "Resume",
-                      style: baseFontStyle(),
-                    )),
-              ),
-            ),
-            const SizedBox(width: 20),
-            Expanded(
-              child: TextButton(
-                onPressed: () async {
-                  await showDialog(
-                    context: context,
-                    builder: (_) =>
-                        const ImageDialog(typeCertification: 'python'),
-                  );
-                },
-                child: ListTile(
-                    leading: Image.asset(
-                      "images/python_icon.png",
-                      scale: 15,
-                      // color: baseColorBackgroundAndFont,
-                    ),
-                    title: Text(
-                      "Python",
-                      style: baseFontStyle(),
-                    )),
-              ),
-            ),
-          ],
-        ),
+        marginPage(context) > 100
+            ? Row(
+                children: [
+                  const SizedBox(width: 30),
+                  curriculo(),
+                  const SizedBox(width: 20),
+                  pythonCertificado(context),
+                ],
+              )
+            : const SizedBox(),
+        marginPage(context) < 100 ? curriculo() : const SizedBox(),
+        const SizedBox(height: 20),
+        marginPage(context) < 100
+            ? pythonCertificado(context)
+            : const SizedBox(),
       ],
+    ),
+  );
+}
+
+SizedBox curriculo() {
+  return SizedBox(
+    width: 250,
+    child: TextButton(
+      onPressed: () {
+        requestRedirectUrl(
+            'https://drive.google.com/uc?id=13xMJjXOCzqt5SBsmmo3lx8idGsPvNUiY&export=download');
+      },
+      child: ListTile(
+        leading: Icon(
+          Icons.download,
+          color: baseColorBackgroundAndFont,
+        ),
+        title: Text(
+          "Resume",
+          style: baseFontStyle(),
+        ),
+      ),
+    ),
+  );
+}
+
+SizedBox pythonCertificado(context) {
+  return SizedBox(
+    width: 250,
+    child: TextButton(
+      onPressed: () async {
+        await showDialog(
+          context: context,
+          builder: (_) => const ImageDialog(typeCertification: 'python'),
+        );
+      },
+      child: ListTile(
+        leading: Image.asset(
+          "images/python_icon.png",
+          scale: 15,
+          // color: baseColorBackgroundAndFont,
+        ),
+        title: Text(
+          "Python",
+          style: baseFontStyle(),
+        ),
+      ),
     ),
   );
 }
