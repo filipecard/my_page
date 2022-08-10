@@ -33,7 +33,7 @@ Container apresentacao(BuildContext context) {
             style: baseFontStyle(),
           ),
         ),
-        const SizedBox(height: 50),
+        const SizedBox(height: 150),
         Text(
           ''' About me, i have many skills and tastes, a mixed musical taste. I'm a graphic designer and i like to develop my creativity with drawings and inspirations.
           ''',
@@ -46,7 +46,7 @@ Container apresentacao(BuildContext context) {
             style: baseFontStyle(),
           ),
         ),
-        const SizedBox(height: 50),
+        const SizedBox(height: 150),
         Text(
           ''' I'm a fan of random facts and "unfunny" jokes. Ok here is a combo:
 
@@ -61,7 +61,7 @@ Container apresentacao(BuildContext context) {
           ),
         ),
         Text('Wait for it...', style: baseFontStyle()),
-        const SizedBox(height: 50),
+        const SizedBox(height: 100),
         Text(' - This is a cockroacheadless. \n', style: baseFontStyle()),
         Container(
           padding: const EdgeInsets.only(left: 80, bottom: 30),

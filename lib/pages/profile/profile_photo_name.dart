@@ -65,7 +65,7 @@ Column infoContato(context) {
             );
           },
           child: ListTile(
-            leading: Icon(Icons.phone, color: baseColorBackgroundAndFont),
+            leading: Icon(Icons.phone, color: fontColor),
             title: Text(
               '(86) 9 8134-6155',
               style: baseFontStyle(fontSize: 18),
@@ -80,7 +80,7 @@ Column infoContato(context) {
           child: ListTile(
             leading: Icon(
               Icons.email,
-              color: baseColorBackgroundAndFont,
+              color: fontColor,
             ),
             title: Text(
               'filipecardosooliveira@hotmail.com',
@@ -97,7 +97,7 @@ Column infoContato(context) {
             leading: Image.asset(
               "images/icon-linkedin.png",
               scale: 18,
-              color: baseColorBackgroundAndFont,
+              color: fontColor,
             ),
             title: Text(
               'www.linkedin.com/in/filipecarolidev/',

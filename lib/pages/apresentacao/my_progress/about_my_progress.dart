@@ -15,13 +15,11 @@ class AboutMyProgress extends StatelessWidget {
       body: ListView(
         scrollDirection: Axis.vertical,
         children: [
-          whiteBoxContainer(descriptionMyProgress(), context,
-              top: 10, botoom: 10),
+          whiteBoxContainer(descriptionMyProgress(), context, top: 100),
           whiteBoxContainer(curriculoAndCertifications(context), context,
-              top: 10, botoom: 10),
-          whiteBoxContainer(conhecimentosGerais(context), context,
-              top: 10, botoom: 10),
-          whiteBoxContainer(footer(), context, top: 10, botoom: 30)
+              top: 50),
+          whiteBoxContainer(conhecimentosGerais(context), context, top: 50),
+          whiteBoxContainer(footer(), context, top: 100, botoom: 40)
         ],
       ),
     );

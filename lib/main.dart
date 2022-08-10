@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:my_page/pages/footer.dart';
 import 'package:my_page/pages/profile/profile_photo_name.dart';
@@ -43,9 +41,9 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView(
         scrollDirection: Axis.vertical,
         children: [
-          whiteBoxContainer(profilePhotoAndName(context), context, top: 60),
-          whiteBoxContainer(apresentacao(context), context, top: 10),
-          whiteBoxContainer(footer(), context, top: 10, botoom: 40)
+          whiteBoxContainer(profilePhotoAndName(context), context, top: 200),
+          whiteBoxContainer(apresentacao(context), context, top: 150),
+          whiteBoxContainer(footer(), context, top: 100, botoom: 40)
           // whiteBoxContainer(conhecimentosGerais(), top: 10, botoom: 800),
         ],
       ),

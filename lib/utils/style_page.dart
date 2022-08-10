@@ -1,9 +1,7 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 Color baseColorBackgroundAndFont = Color.fromARGB(235, 42, 48, 53);
-
+Color fontColor = Colors.white;
 Color invisibleColor() {
   return const Color.fromARGB(0, 230, 13, 13);
 }
@@ -15,7 +13,7 @@ TextStyle baseFontStyle(
   return TextStyle(
     fontSize: fontSize,
     fontWeight: fontWeight,
-    color: baseColorBackgroundAndFont,
+    color: fontColor,
     fontFamily: 'FiraCode',
     decoration: decoration,
   );
@@ -42,8 +40,7 @@ Container whiteBoxContainer(Widget widget, BuildContext context,
     child: Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: const Color.fromARGB(
-            255, 244, 247, 255), //Color.fromRGBO(19, 111, 99, 1),
+        color: baseColorBackgroundAndFont,
       ),
       child: widget,
     ),
