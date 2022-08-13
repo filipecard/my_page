@@ -34,9 +34,9 @@ Column profilePhotoAndName(context) {
                     ),
                   ),
                 ),
-                marginPage(context) < 100
-                    ? const SizedBox()
-                    : Expanded(child: infoContato(context)),
+                splitComponents(context) == WindowSize.large
+                    ? Expanded(child: infoContato(context))
+                    : const SizedBox(),
                 const SizedBox(width: 60),
               ],
             ),
@@ -46,7 +46,9 @@ Column profilePhotoAndName(context) {
       const SizedBox(
         height: 20,
       ),
-      marginPage(context) < 100 ? infoContato(context) : const SizedBox()
+      splitComponents(context) == WindowSize.large
+          ? const SizedBox()
+          : infoContato(context)
     ],
   );
 }

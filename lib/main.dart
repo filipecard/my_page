@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_page/pages/footer.dart';
-import 'package:my_page/pages/profile/profile_photo_name.dart';
-import 'package:my_page/pages/apresentacao/apresentacao.dart';
-import 'package:my_page/utils/style_page.dart';
+import 'package:my_page/pages/homePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,22 +28,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: const Center(
-              child: Text(
-            "Hello, welcome to my profile",
-            style: TextStyle(fontFamily: "FiraCode", fontSize: 25),
-          )),
-          automaticallyImplyLeading: false),
-      body: ListView(
-        scrollDirection: Axis.vertical,
-        children: [
-          whiteBoxContainer(profilePhotoAndName(context), context, top: 200),
-          whiteBoxContainer(apresentacao(context), context, top: 150),
-          whiteBoxContainer(footer(), context, top: 100, botoom: 40)
-          // whiteBoxContainer(conhecimentosGerais(), top: 10, botoom: 800),
-        ],
-      ),
-    );
+        appBar: AppBar(
+            title: const Center(
+                child: Text(
+              "Hello, welcome to my profile",
+              style: TextStyle(fontFamily: "FiraCode", fontSize: 25),
+            )),
+            automaticallyImplyLeading: false),
+        body: homepage(context));
   }
 }

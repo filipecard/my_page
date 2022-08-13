@@ -1,9 +1,6 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:my_page/pages/footer.dart';
-import '../../../utils/style_page.dart';
-import '../../../utils/tools.dart';
+import '../../utils/style_page.dart';
+import '../../utils/tools.dart';
 
 class AboutMyProgress extends StatelessWidget {
   const AboutMyProgress({super.key});
@@ -15,11 +12,10 @@ class AboutMyProgress extends StatelessWidget {
       body: ListView(
         scrollDirection: Axis.vertical,
         children: [
-          whiteBoxContainer(descriptionMyProgress(), context, top: 100),
-          whiteBoxContainer(curriculoAndCertifications(context), context,
-              top: 50),
-          whiteBoxContainer(conhecimentosGerais(context), context, top: 50),
-          whiteBoxContainer(footer(), context, top: 100, botoom: 40)
+          descriptionMyProgress(),
+          curriculoAndCertifications(context),
+          conhecimentosGerais(context),
+          footer()
         ],
       ),
     );
@@ -37,19 +33,21 @@ Container curriculoAndCertifications(context) {
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 30),
-        marginPage(context) > 100
-            ? Row(
+        splitComponents(context) == WindowSize.small
+            ? const SizedBox()
+            : Row(
                 children: [
                   const SizedBox(width: 30),
                   curriculo(),
                   const SizedBox(width: 20),
                   pythonCertificado(context),
                 ],
-              )
+              ),
+        splitComponents(context) == WindowSize.small
+            ? curriculo()
             : const SizedBox(),
-        marginPage(context) < 100 ? curriculo() : const SizedBox(),
         const SizedBox(height: 20),
-        marginPage(context) < 100
+        splitComponents(context) == WindowSize.small
             ? pythonCertificado(context)
             : const SizedBox(),
       ],
@@ -182,7 +180,7 @@ Column conhecimentosGerais(context) {
 }
 
 Widget languageAndFrameworkResponsive(context) {
-  if (marginPage(context) > 100) {
+  if (splitComponents(context) == WindowSize.large) {
     return Row(
       children: [
         Expanded(child: conhecimentosGeraisPart1()),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_page/constants.dart';
+import 'package:my_page/utils/tools.dart';
 
-Color baseColorBackgroundAndFont = Color.fromARGB(235, 42, 48, 53);
+Color baseColorBackgroundAndFont = const Color.fromARGB(235, 42, 48, 53);
 Color fontColor = Colors.white;
 Color invisibleColor() {
   return const Color.fromARGB(0, 230, 13, 13);
@@ -19,30 +21,57 @@ TextStyle baseFontStyle(
   );
 }
 
-double marginPage(context) {
+WindowSize splitComponents(context) {
   var windowSize = MediaQuery.of(context).size.width;
-  if (windowSize > 1080) {
-    return 150.00;
+  // print(windowSize);
+  if (windowSize <= minWindowSize) {
+    return WindowSize.small;
+  } else if (windowSize < medWindowSize) {
+    return WindowSize.medium;
   } else {
-    return 10.00;
+    return WindowSize.large;
   }
 }
 
-Container whiteBoxContainer(Widget widget, BuildContext context,
-    {double top = 10, double botoom = 10}) {
+enum WindowSize { small, medium, large }
+
+extension WindowSizeExtension on WindowSize {
+  String get size {
+    switch (this) {
+      case WindowSize.small:
+        return 'small';
+      case WindowSize.medium:
+        return 'medium';
+      default:
+        return 'large';
+    }
+  }
+}
+
+Container footer() {
   return Container(
-    color: baseColorBackgroundAndFont,
-    padding: EdgeInsets.only(
-        left: marginPage(context),
-        right: marginPage(context),
-        top: top,
-        bottom: botoom),
-    child: Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: baseColorBackgroundAndFont,
-      ),
-      child: widget,
+    padding: const EdgeInsets.only(top: 10, bottom: 10, right: 30, left: 20),
+    child: Row(
+      children: [
+        TextButton(
+          onPressed: () =>
+              requestRedirectUrl("https://github.com/filipecard/my_page"),
+          child: Text(
+            "Github",
+            style: baseFontStyle(
+                fontSize: 15, decoration: TextDecoration.underline),
+            textAlign: TextAlign.end,
+          ),
+        ),
+        const Expanded(child: SizedBox(width: 1000)),
+        Expanded(
+          child: Text(
+            'by Filipe Cardoso,2022',
+            style: baseFontStyle(fontSize: 15),
+            textAlign: TextAlign.end,
+          ),
+        ),
+      ],
     ),
   );
 }
