@@ -47,6 +47,8 @@ class WappRedirect extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(height: 350),
+          footer()
         ],
       ),
     );
