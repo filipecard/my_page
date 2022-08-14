@@ -15,6 +15,7 @@ class AboutMyProgress extends StatelessWidget {
           descriptionMyProgress(),
           curriculoAndCertifications(context),
           conhecimentosGerais(context),
+          const SizedBox(height: 100),
           footer()
         ],
       ),
@@ -94,7 +95,7 @@ SizedBox pythonCertificado(context) {
           // color: baseColorBackgroundAndFont,
         ),
         title: Text(
-          "Python",
+          "Piauí Conectado",
           style: baseFontStyle(),
         ),
       ),
@@ -120,7 +121,7 @@ class ImageDialog extends StatelessWidget {
 
 Container descriptionMyProgress() {
   return Container(
-    padding: const EdgeInsets.only(top: 20, bottom: 60, left: 30, right: 30),
+    padding: const EdgeInsets.only(top: 20, bottom: 60, right: 30),
     child: Column(
       children: [
         Text(

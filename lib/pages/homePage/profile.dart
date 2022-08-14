@@ -3,7 +3,7 @@ import 'package:my_page/pages/profile/wapp_redirect.dart';
 import '../../utils/style_page.dart';
 import '../../utils/tools.dart';
 
-Column profilePhotoAndName(context) {
+Column profile(context) {
   return Column(
     children: [
       const SizedBox(
